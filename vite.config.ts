@@ -8,5 +8,8 @@ export default defineConfig({
     rules: { "vite-plus/prefer-vite-plus-imports": "error" },
     options: { typeAware: true, typeCheck: true },
   },
+  preview: {
+    allowedHosts: ["qr.0xott.cloud"],
+  },
   plugins: [solid()],
 });
