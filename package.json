@@ -1,0 +1,22 @@
+{
+  "name": "qr",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vp dev",
+    "build": "tsc -b && vp build",
+    "preview": "vp preview"
+  },
+  "dependencies": {
+    "solid-js": "^1.9.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.3",
+    "typescript": "~6.0.2",
+    "vite": "catalog:",
+    "vite-plugin-solid": "^2.11.12",
+    "vite-plus": "catalog:"
+  },
+  "packageManager": "pnpm@11.5.3"
+}
