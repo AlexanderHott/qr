@@ -9,7 +9,8 @@
     "preview": "vp preview"
   },
   "dependencies": {
-    "solid-js": "^1.9.12"
+    "solid-js": "^1.9.12",
+    "uqr": "^0.1.3"
   },
   "devDependencies": {
     "@types/node": "^24.12.3",
