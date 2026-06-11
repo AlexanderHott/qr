@@ -1,0 +1,18 @@
+[phases.setup]
+nixPkgs = ["nodejs_22"]
+
+[phases.install]
+dependsOn = ["setup"]
+cmds = [
+  "npm config set prefix /usr/local && npm install -g n && /usr/local/bin/n 24.16.0 && export PATH=/usr/local/bin:$PATH && hash -r && node --version && npm --version && npm install -g pnpm@11.5.3 && pnpm --version && pnpm install --frozen-lockfile",
+]
+cacheDirectories = ["/root/.local/share/pnpm/store"]
+paths = ["/app/node_modules/.bin"]
+
+[phases.build]
+dependsOn = ["install"]
+cmds = ["export PATH=/usr/local/bin:$PATH && pnpm build"]
+cacheDirectories = ["node_modules/.cache"]
+
+[start]
+cmd = "export PATH=/usr/local/bin:$PATH && pnpm exec vp preview --host 0.0.0.0 --port 3000"
