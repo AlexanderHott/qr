@@ -13,6 +13,3 @@ paths = ["/app/node_modules/.bin"]
 dependsOn = ["install"]
 cmds = ["export PATH=/usr/local/bin:$PATH && pnpm build"]
 cacheDirectories = ["node_modules/.cache"]
-
-[start]
-cmd = "export PATH=/usr/local/bin:$PATH && pnpm exec vp preview --host 0.0.0.0 --port 3000"
